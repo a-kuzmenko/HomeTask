@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// 1. Приветствовать любого пользователя при вводе его имени через командную строку.
-    /*    Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         String name = scanner.next();
         System.out.println("Hello " + name);
@@ -52,11 +52,11 @@ public class Main {
             cum *= Integer.parseInt(arg);
         }
         System.out.println("cum = "+ cum);
-        */
+
 
     //6.Ввести с консоли n целых чисел. На консоль вывести:
     //    6.1. Четные и нечетные числа.
-       /* Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number from 1 to 9: ");
 
         //int arr [] = new int[6];
@@ -118,9 +118,9 @@ public class Main {
                     System.out.println("3х-значное число в десятичной записи которых нет одинаковых цифр: " + scanNumber[i]);
             }
 
-*/
+
     //    6.6. «Счастливые» числа.
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number from 1 to 9: ");
         int newsize = scanner.nextInt();
         int happyNumber [] = new int[newsize];
@@ -139,20 +139,20 @@ public class Main {
                 a1 = happyNumber[i] / 100; // выделение 1й 2ки чисел
                 b1 = happyNumber[i] % 100; // выделение 2й 2ки чисел
 
-                int sum = 0;
                 int sum1 = 0;
+                int sum2 = 0;
 
                 while (a1 != 0) {  //подсчитать сумму 1й двойки чисел
-                    sum = sum + a1 % 10;
+                    sum1 = sum1 + a1 % 10;
                     a1 = a1 / 10;
                 }
 
                 while (b1 != 0) {  //подсчитать сумму 2й двойки чисел
-                    sum1 = sum1 + b1 % 10;
+                    sum2 = sum2 + b1 % 10;
                     b1 = b1 / 10;
                 }
 
-                if (sum == sum1) {
+                if (sum1 == sum2) {
                     System.out.println("Happy number: " + happyNumber[i]);
                 }
             }
